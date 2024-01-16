@@ -1,0 +1,64 @@
+Algoritmo OperacionesMatrz
+1.Inicio
+2.	Definir filas, columnas, suma, resta, multiplicacion Como Entero 
+3.	<< "Ingrese la cantidad de filas y columnas de la matriz cuadrada:"
+4.    	>> filas
+5.	>> columnas
+6.    	Dimension matrizA[filas, columnas] Como Entero  
+7.    	llenarMatriz(matrizA, filas, columnas)
+8.    	<< "Matriz:"
+9.    	presentarMatriz(matrizA, filas, columnas)
+10.    	<< "La suma de la matriz es:", suma
+11.    	<< "La resta de la matriz es:", resta
+12.	<< "La multiplicación de la matriz es:", multiplicacion
+13.	Fin funcion principal
+14.FinAlgoritmo
+
+1.Procedimiento llenarMatriz(matriz, filas , columnas):
+2.	Para(i=0; i<filas; i=i+1)
+3.		Para(j=0; j<columnas; j=j+1)
+4.			matriz[i][j] = Aleatorio(1,9)
+5.		FinPara
+6.	FinPara
+7.FinProcedimiento
+
+1.Procedimiento presentarMatriz(matriz , filas , columnas )
+2.	Para(i=0; i<filas; i=i+1)
+3.		Para(j=0; j<columnas; j=j+1)
+4.			<< matriz[i][j], " | " 
+5.		FinPara
+7.	FinPara
+8.FinProcedimiento
+
+1.Funcion sumaMatriz(matriz , Filas , columnas)
+2.	Definir suma Como Entero
+3.	Para(i=0; i<filas; i=i+1)
+4.		Para(j=0; j<columnas; j=j+1)
+5.			suma = suma + matriz[i][j]
+6.		FinPara
+7.	FinPara
+8.FinFuncion
+
+1.Funcion restarMatriz(matriz , filas , columnas)
+2.	Definir resta Como Entero
+3.	Para(i=0; i<filas; i=i+1)
+4.		Para(j=0; j<columnas; j=j+1)
+5.			Si(i=0 y j=0)
+6.				resta= matriz[i][j]
+7.			Sino
+8.				resta = resta - matriz[i][j]
+9.			FinSi		
+10		FinPara
+11.	FinPara
+12. Devolver resta
+13.FinFuncion
+
+1.Funcion multiplicacionMatriz(matriz , filas , columnas )
+2.	Definir multiplicacion Como Entero
+3.	Para(i=0; i<filas; i=i+1)
+4.		Para(j=0; j<columnas; j=j+1)
+5.			multiplicacion = multiplicacion * matriz[i][j]
+6.		FinPara
+7.	FinPara
+8.	Devolver multiplicacion
+9.FinFuncion
